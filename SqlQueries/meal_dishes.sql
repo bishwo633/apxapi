@@ -1,0 +1,12 @@
+CREATE TABLE MealDishes
+(
+MealDishesId INT PRIMARY KEY IDENTITY(1,1),
+MealId INT FOREIGN KEY REFERENCES Meals(MealId),
+MenuItemId INT FOREIGN KEY REFERENCES MenuItems(MenuItemId),
+Quantity NVARCHAR(60), 
+IsActive BIT,
+CreatedBy NVARCHAR(200),
+CreatedOn DATETIME,
+UpdatedBy NVARCHAR(200),
+UpdatedOn DATETIME
+)
