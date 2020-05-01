@@ -9,6 +9,10 @@ namespace ApexRestaurant.Api.Controller {
             _customerService = customerService;
         }
 
+        // {base uri} + {controller route} + {action route}
+        // {https://localhost:5001/} + {api/customer/} + {{id}}
+        // {https://localhost:5001/} + {api/customer/} + {5}
+        // https://localhost:5001/api/customer/5
         [HttpGet]
         [Route ("{id}")]
         public IActionResult Get ([FromRoute] int id) {
