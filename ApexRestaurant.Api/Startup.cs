@@ -27,6 +27,9 @@ namespace ApexRestaurant.Api {
                 GetType ().Assembly.FullName);
             ServicesModule.Register (services);
             services.AddMvc(option => option.EnableEndpointRouting = false).SetCompatibilityVersion (CompatibilityVersion.Version_2_1);
+            services.AddCors(allowsites=>{
+                allowsites.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin());
+            });
         }
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure (IApplicationBuilder app, IHostingEnvironment env) {
@@ -38,6 +41,7 @@ namespace ApexRestaurant.Api {
             app.UseHttpsRedirection ();
             app.UseStaticFiles ();
             app.UseMvc();
+            app.UseCors(options => options.AllowAnyOrigin());
         }
     }
 }

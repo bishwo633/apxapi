@@ -1,8 +1,11 @@
+using System.Threading;
 using ApexRestaurant.Repository.Domain;
 using ApexRestaurant.Services.SCustomer;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 namespace ApexRestaurant.Api.Controller {
     [Route ("api/customer")]
+    [EnableCors("AllowOrigin")]
     public class CustomerController : ControllerBase {
         private readonly ICustomerService _customerService;
         public CustomerController (ICustomerService customerService) {
@@ -25,6 +28,7 @@ namespace ApexRestaurant.Api.Controller {
         [HttpGet]
         [Route ("")]
         public IActionResult GetAll () {
+            System.Threading.Thread.Sleep(2500);
             var customers = _customerService.GetAll ();
             return Ok (customers);
         }
