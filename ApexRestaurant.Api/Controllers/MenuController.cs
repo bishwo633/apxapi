@@ -9,6 +9,11 @@ namespace ApexRestaurant.Api.Controller {
             _menuService = menuService;
         }
 
+        public void Test()
+        {
+            
+        }
+
         [HttpGet]
         [Route ("{id}")]
         public IActionResult Get ([FromRoute] int id) {

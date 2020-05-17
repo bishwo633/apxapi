@@ -15,7 +15,7 @@ namespace ApexRestaurant.Api.Controller {
             var endpoints = new List<string>{"customer", "meal", "mealdish", "menu", "menuitem", "staff", "staffrole"};
 
             // taag (text to ascii art generator)
-            var api_is_working = @"
+            var api_is_working = @" ...
   _____ _               _    ____ ___   _                          _    _             
  |_   _| |__   ___     / \  |  _ \_ _| (_)___  __      _____  _ __| | _(_)_ __   __ _ 
    | | | '_ \ / _ \   / _ \ | |_) | |  | / __| \ \ /\ / / _ \| '__| |/ / | '_ \ / _` |
