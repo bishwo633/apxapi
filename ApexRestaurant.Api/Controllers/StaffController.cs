@@ -41,8 +41,8 @@ namespace ApexRestaurant.Api.Controller {
 
         [HttpDelete]
         [Route ("")]
-        public IActionResult Delete ([FromBody] Staff model) {
-            _staffService.Delete (model);
+        public IActionResult Delete ([FromBody] int id) {
+            _staffService.Delete (id);
             return Ok ();
         }
     }

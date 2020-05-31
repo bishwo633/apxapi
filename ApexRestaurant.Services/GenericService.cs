@@ -27,8 +27,9 @@ namespace ApexRestaurant.Services
         {
             return EntityRepository.Get(id);
         }
-        public void Delete(T entity)
+        public void Delete(int id)
         {
+            T entity = GetById(id);
             EntityRepository.Delete(entity);
         }
     }
