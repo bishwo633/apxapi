@@ -23,6 +23,16 @@ namespace ApexRestaurant.Mvc.Controllers
             return View();
         }
 
+        public ActionResult List()
+        {
+            return View();
+        }
+
+        public ActionResult Create()
+        {
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();
