@@ -5,9 +5,15 @@ using System.Collections.Generic;
 namespace ApexRestaurant.Api.Controller {
     [Route ("/")]
     public class HomeController : ControllerBase {
+
+        public void TestFunction()
+        {
+            
+        }
+
         [HttpGet]
         [Route ("/")]
-        public IActionResult Index () {
+        public IActionResult Index2 () {
             // get base_uri, e.g. https://localhost:5001
             var base_uri = $"{this.Request.Scheme}://{this.Request.Host}{this.Request.PathBase}";
 
